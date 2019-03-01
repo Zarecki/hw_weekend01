@@ -9,3 +9,7 @@ end
 def add_or_remove_cash(cash_add, amount)
   @pet_shop[:admin][:total_cash] += amount
 end
+
+def add_or_remove_cash(cash_remove, amount)
+  @pet_shop[:admin][:total_cash] += amount
+end
