@@ -13,3 +13,7 @@ end
 def add_or_remove_cash(cash_remove, amount)
   @pet_shop[:admin][:total_cash] += amount
 end
+
+def pets_sold(number_sold)
+  @pet_shop[:admin][:pets_sold]
+end
