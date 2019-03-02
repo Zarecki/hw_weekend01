@@ -51,6 +51,7 @@ def remove_pet_by_name(pet_shop, name)
      p pet_shop[:pets].delete(pet)
    end
  end
+ return nil
 end
 
 def add_pet_to_stock(shop, new_pet)
@@ -78,6 +79,9 @@ def customer_can_afford_pet(customer, new_pet)
 end
 
 def sell_pet_to_customer(shop, pet, customer)
+  if pet == nil
+    return nil
+  end
   cost = pet[:price]
   if customer[:cash] >= cost
     customer[:cash] -= cost
